@@ -4,16 +4,29 @@ body{
         justify-content: center;
         height: fit-content;
         position: relative;
-        top:400px
+        top:400px;
+        background-color: hsl(222, 26%, 31%);
 }
 
+.title{
+    color:whitesmoke;
+    position: relative;
+    top:-350px;
+    left:22%;
+}
+
+/*screen background*/
 .display-container{
     position:relative;
-    top:-80px;
-    left:9%;;
+    top:-260px;
+    left:18%;
+    color: whitesmoke;
+    font-size: 400%;
     height: fit-content;
-    width: 9%;
-    background-color: lightgrey;
+    width: 30%;
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 5px;
+    padding: 1%;
 }
 
 .display-container .number-placeholder{
@@ -24,59 +37,68 @@ body{
         height: auto;
 }
 
+/*keypad background*/
 .grid-container{
     display: flex;
         flex-direction: row;
         justify-content: center;
-        background-color:grey;
-        height: auto;
-        width: fit-content;
-
+        background-color:hsl(223, 31%, 20%);
+        height: 470px;
+        width: 30%;
         display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 5px;
-        padding: 10px; 
+        grid-template-columns:13% 13% 13% 13%;
+        gap: 12%;
+        padding-top: 3%; 
+        padding-bottom: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+        position:relative;
+        top: -100px;
+        left:-14%;
+        border-radius: 10px;
 }
 
 
-.grid-item1{
-    grid-column-start: 1;
-
-  
-}
-.grid-item2{
-    grid-column-start: 2;
-    }
-.grid-item3{
-    grid-column-start: 3;
-}
-.grid-item4{
-    grid-column-start: 4;
-}
-
-.grid-item5{
-   
-}
-
-.grid-item9{
-   
-}
-
-.grid-item13{
-   
-}
-
-.grid-item17{
-    position: relative;
-        left: 60%;
-}
-.grid-item18{
+.grid-item{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-radius: 10%;
+    justify-content: center;
     position:relative;
-    left:200%;
-
+    left:-38%;
+    top:-50%;
+    height: fit-content;
+    margin-bottom: -45%;
+    
 }
-.grid-item18 button{
-    width:160%;
+button{
+    background-color: hsl(30, 25%, 89%);
+    font-size: xx-large;
+    padding:50%;
+    border-radius: 7%;
+    width: 125.41px;
+    height:50.2px;
+    padding-bottom: 70%; 
 }
 
- 
+#reset button{
+    width:360%;  
+    position: relative;
+    left: -35%;
+    top: -50%;
+    margin-top: 50%;
+    background-color:hsl(225, 21%, 49%);
+}
+
+
+#equal button{
+    width: 360%;
+    position: relative;
+        left: 155%;
+        top:-50%;
+        margin-top: 50%;
+        background-color:hsl(6, 63%, 50%);
+       
+}
+
+
