@@ -1,7 +1,7 @@
 //first list of array numbers and conver it into a whole number
 const button=document.querySelectorAll('.button');
 const displayNumbers=document.querySelector('.number-placeholder')
-console.log(displayNumbers);
+console.log(button);
 //function for caculations
 let numbers=[];
 let symbols='';
@@ -70,3 +70,78 @@ numbers2=[eval(numbers2.join(' '))]
 numbers2.push(symbols);
 }
 }
+
+
+
+//toggle button
+const switcher=document.querySelector('.switch');
+const toggleButton=switcher.firstElementChild;
+/*Elements style that needs to be changed;
+
+body: background-color;
+title: color;
+display-container: color and background-color;
+grid-container: background-color
+button: background-color
+reset button:background-color
+equal button:background-color
+delete button:background-color
+*/
+const body=document.body;
+const title=document.querySelector('.title');
+const displayContainer=document.querySelector('.display-container');
+const gridContainer=document.querySelector('.grid-container');
+const resetButton=document.querySelector('#reset').firstElementChild;
+const equalButton=document.querySelector('#equal').firstElementChild;
+
+console.log(button[3]);
+
+let switchNumber=parseInt(toggleButton.value); 
+toggleButton.addEventListener('click', function(){
+    //if clicked then add the value by one. Depending on where the value is at the color of the theme changes and the slider moves to a certain point based on the value
+    switchNumber=switchNumber+1;
+
+    if(switchNumber>3){
+        switchNumber=1;
+    }
+
+    switch(switchNumber){
+        case 1:
+    body.style.backgroundColor="hsl(222, 26%, 31%)";
+    title.style.color="whitesmoke";
+    displayContainer.style.color="whitesmoke";
+    displayContainer.style.backgroundColor="hsl(224, 36%, 15%)";
+    gridContainer.style.backgroundColor="hsl(223, 31%, 20%)";
+    button.style.backgroundColor="hsl(223, 31%, 20%)";
+    resetButton.style.backgroundColor="hsl(225, 21%, 49%)";
+    equalButton.style.backgroundColor="hsl(6, 63%, 50%)";
+    button[3].style.backgroundColor="hsl(225, 21%, 49%)";
+        break;
+        case 2:
+body.style.backgroundColor="hsl(0, 0%, 90%)";
+    title.style.color="black";
+    displayContainer.style.color="black";
+    displayContainer.style.backgroundColor="hsl(0, 0%, 93%)";
+    gridContainer.style.backgroundColor="hsl(0, 5%, 81%)";
+     button.style.color="black";
+    button.style.backgroundColor="hsl(185, 42%, 37%)";
+    resetButton.style.backgroundColor="hsl(185, 42%, 37%)";
+    equalButton.style.backgroundColor="hsl(25, 98%, 40%)";
+    button[3].style.backgroundColor="hsl(225, 21%, 49%)";
+        break;
+        case 3:
+body.style.backgroundColor="hsl(268, 75%, 9%)";
+    title.style.color=" hsl(52, 100%, 62%)";
+    displayContainer.style.color=" hsl(52, 100%, 62%)";
+    displayContainer.style.backgroundColor="hsl(268, 71%, 12%)";
+    gridContainer.style.backgroundColor="hsl(268, 71%, 12%)";
+    button.style.color="hsl(52, 100%, 62%)";
+    button.style.backgroundColor="hsl(281, 89%, 26%)";
+    resetButton.style.backgroundColor="hsl(185, 42%, 37%)";
+    equalButton.style.backgroundColor="hsl(25, 98%, 40%)";
+    button[3].style.backgroundColor="red";
+        break;
+    }
+
+    console.log(switchNumber);
+})
