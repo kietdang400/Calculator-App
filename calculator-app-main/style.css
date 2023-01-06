@@ -17,15 +17,27 @@ body{
     left:22%;
 }
 
+
+ #theme{
+   color: whitesmoke;
+}
+
 /*toogle button*/
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 180px;
+    width: 0px;
     height: 34px;
 }
 
+.switch .toggle-button{
+    height: 34px;
+    width:95px;
+    border-radius: 34px;
+   background-color:hsl(224, 36%, 15%);
+    
+}
 
 
 /* The slider */
@@ -51,26 +63,11 @@ body{
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
+    transform: translateX(3px);
 }
 
-input:checked+.slider {
-    background-color: #2196F3;
-}
-
-input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-.slider:before{
-    transform: translateX(0px);
-}
-.slider::after{
-    transform: translateX(26px);
-}
 /* Rounded sliders */
-.slider.round {
-    border-radius: 34px;
-}
+
 
 .slider.round:before {
     border-radius: 50%;
@@ -121,7 +118,7 @@ input:focus+.slider {
 
 
 .grid-item{
-    border: 1px solid rgba(0, 0, 0, 0.8);
+    border:0px solid rgba(0, 0, 0, 0.8);
     text-align: center;
     border-radius: 10%;
     justify-content: center;
@@ -132,7 +129,7 @@ input:focus+.slider {
     margin-bottom: -45%;
     
 }
-button{
+.button{
     background-color: hsl(30, 25%, 89%);
     font-size: xx-large;
     padding:50%;
@@ -143,7 +140,7 @@ button{
     color:black;
 }
 
-#reset button{
+#reset .button{
     width:360%;  
     position: relative;
     left: -35%;
@@ -153,14 +150,13 @@ button{
 }
 
 
-#equal button{
+#equal .button{
     width: 360%;
     position: relative;
         left: 155%;
         top:-50%;
         margin-top: 50%;
         background-color:hsl(6, 63%, 50%);
-       
 }
 
 }

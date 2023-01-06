@@ -35,6 +35,10 @@ else if(e.target.value=='del'){
     numbers.pop();
     console.log(numbers);
 displayNumbers.innerHTML=`${numbers.join('')}`
+
+if(numbers.length==0){
+    displayNumbers.innerHTML=`${0}`;
+}
 }
 //reset button
 else if(e.target.value=='reset'){ 
@@ -76,25 +80,16 @@ numbers2.push(symbols);
 //toggle button
 const switcher=document.querySelector('.switch');
 const toggleButton=switcher.firstElementChild;
-/*Elements style that needs to be changed;
 
-body: background-color;
-title: color;
-display-container: color and background-color;
-grid-container: background-color
-button: background-color
-reset button:background-color
-equal button:background-color
-delete button:background-color
-*/
 const body=document.body;
 const title=document.querySelector('.title');
 const displayContainer=document.querySelector('.display-container');
 const gridContainer=document.querySelector('.grid-container');
 const resetButton=document.querySelector('#reset').firstElementChild;
 const equalButton=document.querySelector('#equal').firstElementChild;
+const slider=document.querySelector(".switch").firstElementChild.firstElementChild
+const toggleBtn=document.querySelector(".switch").firstElementChild
 
-console.log(button[3]);
 
 let switchNumber=parseInt(toggleButton.value); 
 toggleButton.addEventListener('click', function(){
@@ -105,6 +100,8 @@ toggleButton.addEventListener('click', function(){
         switchNumber=1;
     }
 
+    
+
     switch(switchNumber){
         case 1:
     body.style.backgroundColor="hsl(222, 26%, 31%)";
@@ -112,10 +109,32 @@ toggleButton.addEventListener('click', function(){
     displayContainer.style.color="whitesmoke";
     displayContainer.style.backgroundColor="hsl(224, 36%, 15%)";
     gridContainer.style.backgroundColor="hsl(223, 31%, 20%)";
-    button.style.backgroundColor="hsl(223, 31%, 20%)";
-    resetButton.style.backgroundColor="hsl(225, 21%, 49%)";
-    equalButton.style.backgroundColor="hsl(6, 63%, 50%)";
-    button[3].style.backgroundColor="hsl(225, 21%, 49%)";
+    equalButton.style.backgroundColor="red";
+    button.forEach(button=>{
+        button.style.backgroundColor="hsl(30, 25%, 89%)";
+        button.style.color="black";
+
+        if(button.value=="="){
+            button.style.backgroundColor="red";
+        }
+
+         if(button.value=="reset")
+        {
+            button.style.backgroundColor="hsl(225, 21%, 49%)";
+        }
+
+         if(button.value=="del")
+        {
+            button.style.backgroundColor="hsl(225, 21%, 49%)";
+        }
+     });
+
+     //slider
+slider.style.transform="translateX(3px)";
+toggleBtn.style.backgroundColor="hsl(224, 36%, 15%)";
+//.slider.round:before targets the circle directly;
+
+
         break;
         case 2:
 body.style.backgroundColor="hsl(0, 0%, 90%)";
@@ -123,11 +142,31 @@ body.style.backgroundColor="hsl(0, 0%, 90%)";
     displayContainer.style.color="black";
     displayContainer.style.backgroundColor="hsl(0, 0%, 93%)";
     gridContainer.style.backgroundColor="hsl(0, 5%, 81%)";
-     button.style.color="black";
-    button.style.backgroundColor="hsl(185, 42%, 37%)";
-    resetButton.style.backgroundColor="hsl(185, 42%, 37%)";
-    equalButton.style.backgroundColor="hsl(25, 98%, 40%)";
-    button[3].style.backgroundColor="hsl(225, 21%, 49%)";
+    equalButton.style.backgroundColor="dark-orange";
+    button.forEach(button=>{
+        button.style.backgroundColor="hsl(45, 7%, 89%)";
+        button.style.color="black";
+
+        if(button.value=="="){
+            button.style.backgroundColor="orange";
+        }
+
+         if(button.value=="reset")
+        {
+            button.style.backgroundColor="green";
+        }
+
+         if(button.value=="del")
+        {
+            button.style.backgroundColor="green";
+        }
+     });
+
+     //slider
+slider.style.transform="translateX(30px)";
+toggleBtn.style.backgroundColor="hsl(0, 5%, 81%)";
+
+
         break;
         case 3:
 body.style.backgroundColor="hsl(268, 75%, 9%)";
@@ -135,13 +174,33 @@ body.style.backgroundColor="hsl(268, 75%, 9%)";
     displayContainer.style.color=" hsl(52, 100%, 62%)";
     displayContainer.style.backgroundColor="hsl(268, 71%, 12%)";
     gridContainer.style.backgroundColor="hsl(268, 71%, 12%)";
-    button.style.color="hsl(52, 100%, 62%)";
-    button.style.backgroundColor="hsl(281, 89%, 26%)";
-    resetButton.style.backgroundColor="hsl(185, 42%, 37%)";
-    equalButton.style.backgroundColor="hsl(25, 98%, 40%)";
-    button[3].style.backgroundColor="red";
-        break;
+     equalButton.style.backgroundColor="orange";
+     button.forEach(button=>{
+        button.style.backgroundColor=" hsl(281, 89%, 26%)";
+        button.style.color="hsl(52, 100%, 62%)";
+
+        if(button.value=="="){
+            button.style.backgroundColor="blue";
+        }
+        if(button.value=="reset")
+        {
+            button.style.backgroundColor="purple";
+        }
+
+         if(button.value=="del")
+        {
+            button.style.backgroundColor="purple";
+        }
+
+     })
+     
+     //slider
+slider.style.transform="translateX(52px)";
+toggleBtn.style.backgroundColor="hsl(268, 71%, 12%)";
+
+
     }
+
 
     console.log(switchNumber);
 })
