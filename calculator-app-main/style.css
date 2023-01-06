@@ -1,3 +1,4 @@
+
 @media only screen and (min-width: 1281px) {
 
 body{
@@ -9,17 +10,45 @@ body{
         top:400px;
         background-color: hsl(222, 26%, 31%);
         
+        
 }
 
 .title{
     color:whitesmoke;
+    position: relative;
     top:-350px;
-    left:22%;
+    left:530%;
 }
 
 
  #theme{
    color: whitesmoke;
+    position:relative;
+    top:-64%;
+    left:1100%;
+}
+
+
+
+h3{position:relative;
+top:-77%;
+left:1320%;
+}
+
+h3 .theme-indicators1{
+position:relative;
+left:-25%;
+color: whitesmoke;
+}
+h3 .theme-indicators2 {
+position: relative;
+left: -5%;
+color: whitesmoke;
+}
+h3 .theme-indicators3 {
+position: relative;
+    left: 10%;
+    color: whitesmoke;
 }
 
 /*toogle button*/
@@ -29,6 +58,8 @@ body{
     display: inline-block;
     width: 0px;
     height: 34px;
+    top:-78.5%;
+    left:1270%;
 }
 
 .switch .toggle-button{
@@ -73,11 +104,12 @@ body{
     border-radius: 50%;
 }
 
+
 /*screen background*/
 .display-container{
     position:relative;
     top:-260px;
-    left:18%;
+    left:14.5%;
     color: whitesmoke;
     font-size: 400%;
     height: fit-content;
@@ -112,7 +144,7 @@ body{
         padding-right: 1%;
         position:relative;
         top: -100px;
-        left:-14%;
+        left:-17.5%;
         border-radius: 10px;
 }
 

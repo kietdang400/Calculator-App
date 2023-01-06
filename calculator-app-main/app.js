@@ -90,6 +90,10 @@ const equalButton=document.querySelector('#equal').firstElementChild;
 const slider=document.querySelector(".switch").firstElementChild.firstElementChild
 const toggleBtn=document.querySelector(".switch").firstElementChild
 
+const themeTitle=document.querySelector('#theme');
+const indicator1=document.querySelector('.theme-indicators1');
+const indicator2=document.querySelector('.theme-indicators2');
+const indicator3=document.querySelector('.theme-indicators3');
 
 let switchNumber=parseInt(toggleButton.value); 
 toggleButton.addEventListener('click', function(){
@@ -132,7 +136,11 @@ toggleButton.addEventListener('click', function(){
      //slider
 slider.style.transform="translateX(3px)";
 toggleBtn.style.backgroundColor="hsl(224, 36%, 15%)";
-//.slider.round:before targets the circle directly;
+//theme indicators
+themeTitle.style.color="whitesmoke";
+indicator1.style.color="whitesmoke";
+indicator2.style.color="whitesmoke";
+indicator3.style.color="whitesmoke";
 
 
         break;
@@ -165,7 +173,11 @@ body.style.backgroundColor="hsl(0, 0%, 90%)";
      //slider
 slider.style.transform="translateX(30px)";
 toggleBtn.style.backgroundColor="hsl(0, 5%, 81%)";
-
+//theme indicators
+themeTitle.style.color="black";
+indicator1.style.color="black";
+indicator2.style.color="black";
+indicator3.style.color="black";
 
         break;
         case 3:
@@ -192,15 +204,18 @@ body.style.backgroundColor="hsl(268, 75%, 9%)";
             button.style.backgroundColor="purple";
         }
 
-     })
+     });
+
+
      
      //slider
 slider.style.transform="translateX(52px)";
 toggleBtn.style.backgroundColor="hsl(268, 71%, 12%)";
-
-
+//theme indicators
+themeTitle.style.color="hsl(52, 100%, 62%)";
+indicator1.style.color="hsl(52, 100%, 62%)";
+indicator2.style.color="hsl(52, 100%, 62%)";
+indicator3.style.color="hsl(52, 100%, 62%)";
     }
-
-
-    console.log(switchNumber);
 })
+
